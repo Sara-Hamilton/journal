@@ -13,7 +13,18 @@ Entry.prototype.vowelCount = function() {
   var vowels = ["a", "e", "i", "o", "u"];
   var textArray = this.body.split("");
   textArray.forEach(function(letter){
-    if(vowels.includes(letter)) {
+    if(vowels.includes(letter.toLowerCase())) {
+      count++;
+    }
+  });
+  return count;
+}
+
+Entry.prototype.consonantCount = function() {
+  var count = 0;
+  var arr = this.body.split('');
+  arr.forEach(function(letter) {
+    if ((/[^aeiou]/i).test(letter) === true) {
       count++;
     }
   });

@@ -8,7 +8,8 @@ $(document).ready(function() {
     var entry = new Entry(title, content);
     var entryWordCount = entry.wordCount();
     var entryVowelCount = entry.vowelCount();
-    console.log('You made it this far. words ' + entryWordCount + " vowels " +  entryVowelCount);
+    var consonants = entry.consonantCount();
+    console.log('You made it this far. words ' + entryWordCount + " vowels " +  entryVowelCount + "consonant" + consonants);
 
   }); // submit
 }); // doc ready
