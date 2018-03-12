@@ -9,7 +9,8 @@ $(document).ready(function() {
     var entryWordCount = entry.wordCount();
     var entryVowelCount = entry.vowelCount();
     var consonants = entry.consonantCount();
-    console.log('You made it this far. words ' + entryWordCount + " vowels " +  entryVowelCount + "consonant" + consonants);
+    var teaser = entry.getTeaser();
+    console.log('You made it this far. words ' + entryWordCount + " vowels " +  entryVowelCount + " consonant " + consonants + " first 8 " + teaser);
 
   }); // submit
 }); // doc ready

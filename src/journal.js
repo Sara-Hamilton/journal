@@ -30,3 +30,12 @@ Entry.prototype.consonantCount = function() {
   });
   return count;
 }
+
+Entry.prototype.getTeaser = function() {
+  var words = this.body.split(" ");
+  var result = "";
+  for (var i = 0; i < 8; i++) {
+    result += words[i] + " ";
+  }
+  return result + "...";
+}
