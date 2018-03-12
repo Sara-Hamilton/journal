@@ -6,11 +6,10 @@ $(document).ready(function() {
     var title = $('#title').val();
     var content = $('#content').val();
     var entry = new Entry(title, content);
-    var entryWordCount = entry.wordCount();
-    var entryVowelCount = entry.vowelCount();
+    var words = entry.wordCount();
+    var vowels = entry.vowelCount();
     var consonants = entry.consonantCount();
     var teaser = entry.getTeaser();
-    console.log('You made it this far. words ' + entryWordCount + " vowels " +  entryVowelCount + " consonant " + consonants + " first 8 " + teaser);
-
+    $("#entries").append("<h3>" + title + "</h3>" + "<p>" + teaser + "</p>" + "<p>" + words + " Words</p>" + "<p>" + vowels + " Vowels</p>" + "<p>" + consonants + " Consonants</p>");
   }); // submit
 }); // doc ready

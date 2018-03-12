@@ -6,7 +6,7 @@ export function Entry(title, body) {
 Entry.prototype.wordCount = function() {
   var bodyCount = this.body.split(" ").length;
   return bodyCount;
-}
+};
 
 Entry.prototype.vowelCount = function() {
   var count = 0;
@@ -18,7 +18,7 @@ Entry.prototype.vowelCount = function() {
     }
   });
   return count;
-}
+};
 
 Entry.prototype.consonantCount = function() {
   var count = 0;
@@ -29,7 +29,7 @@ Entry.prototype.consonantCount = function() {
     }
   });
   return count;
-}
+};
 
 Entry.prototype.getTeaser = function() {
   var words = this.body.split(" ");
@@ -38,4 +38,4 @@ Entry.prototype.getTeaser = function() {
     result += words[i] + " ";
   }
   return result + "...";
-}
+};
